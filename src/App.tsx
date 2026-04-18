@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
         }}
         className="font-serif text-xl tracking-tighter font-bold hover:text-gold transition-colors whitespace-nowrap"
       >
-        {t('navbar.logo_princess')} <span className="text-gold italic">{t('navbar.logo_of')}</span> {t('navbar.logo_dubai')}
+        {t('navbar.logo_princess')} <span className="italic">{t('navbar.logo_of')}</span> {t('navbar.logo_dubai')}
       </Link>
       
       <div className="hidden md:flex gap-6 text-[10px] uppercase tracking-[0.2em] font-medium whitespace-nowrap">

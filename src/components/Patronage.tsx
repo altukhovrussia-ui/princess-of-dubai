@@ -22,14 +22,23 @@ export const Patronage: React.FC = () => {
             <h2 className="text-3xl md:text-5xl font-serif text-deep-grey leading-tight mb-8 whitespace-nowrap">
               {t('patronage.title_line1')} <span className="italic">{t('patronage.title_line2')}</span> {t('patronage.title_line3')}
             </h2>
-            <div className="text-deep-grey/70 max-w-md leading-relaxed font-sans font-medium space-y-4">
-              <p>• {t('patronage.patron1')}</p>
-              <p>• {t('patronage.patron2')}</p>
-              <p>• {t('patronage.patron3')}</p>
-            </div>
+            <ul className="flex flex-col space-y-4 text-deep-grey/80 leading-relaxed font-serif" style={{ fontSize: 'clamp(0.8rem, 3.5vw, 1.25rem)' }}>
+              <li className="flex items-start gap-4 whitespace-nowrap">
+                <span className="text-gold mt-1.5 shrink-0 text-sm">✦</span>
+                <span>{t('patronage.patron1')}</span>
+              </li>
+              <li className="flex items-start gap-4 whitespace-nowrap">
+                <span className="text-gold mt-1.5 shrink-0 text-sm">✦</span>
+                <span>{t('patronage.patron2')}</span>
+              </li>
+              <li className="flex items-start gap-4 whitespace-nowrap">
+                <span className="text-gold mt-1.5 shrink-0 text-sm">✦</span>
+                <span>{t('patronage.patron3')}</span>
+              </li>
+            </ul>
             
-            <div className="mt-12 pt-8 border-t border-deep-grey/10 text-xs tracking-widest uppercase text-deep-grey/50 space-y-4">
-              <p>{t('patronage.participation_label')} <br/><span className="text-deep-grey/80 font-bold">{t('patronage.participation_name')}</span></p>
+            <div className="mt-12 pt-8 border-t border-deep-grey/10 text-xs tracking-widest uppercase text-deep-grey/80 space-y-4">
+              <p>{t('patronage.participation_label')} <br/><span className="font-bold">{t('patronage.participation_name')}</span></p>
               <p>{t('patronage.organized_by')} <br/> {t('patronage.organized_by2')}</p>
             </div>
           </motion.div>

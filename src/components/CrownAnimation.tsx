@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const FRAME_COUNT = 121;
+const FRAME_COUNT = 193;
 const FRAME_PREFIX = '/crown-frames/frame_';
 
 function getFramePath(index: number): string {

@@ -6,11 +6,7 @@ import { useTranslation } from 'react-i18next';
 export const Concept: React.FC = () => {
   const { t } = useTranslation();
 
-  const pillars = [
-    { title: t('concept.pillar1_title'), text: t('concept.pillar1_text') },
-    { title: t('concept.pillar2_title'), text: t('concept.pillar2_text') },
-    { title: t('concept.pillar3_title'), text: t('concept.pillar3_text') },
-  ];
+  const points = Array.from({ length: 8 }, (_, i) => t(`concept.point${i + 1}`));
 
   return (
     <Section id="concept" className="py-40 px-6 md:px-24 bg-deep-grey text-ivory overflow-hidden">
@@ -37,21 +33,39 @@ export const Concept: React.FC = () => {
           </motion.h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-16 text-left max-w-5xl mx-auto border-t border-ivory/10 pt-20">
-          {pillars.map((item, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 * i, duration: 0.8 }}
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              <h3 className="text-gold font-serif text-2xl leading-tight border-b border-gold/20 pb-4">{item.title}</h3>
-              <p className="text-ivory/60 text-sm leading-loose font-sans">{item.text}</p>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="mt-12 max-w-5xl w-full border-t border-ivory/10 pt-20 text-left"
+        >
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6">
+            {points.map((point, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * i, duration: 0.5 }}
+                viewport={{ once: true }}
+                className="flex items-start gap-4 text-ivory/70 text-sm font-sans leading-relaxed"
+              >
+                <span className="text-gold mt-0.5 shrink-0 text-xs">✦</span>
+                <span>{point}</span>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mt-16 text-ivory/50 text-sm md:text-base leading-relaxed font-sans italic max-w-3xl text-center"
+        >
+          {t('concept.closing')}
+        </motion.p>
       </div>
     </Section>
   );

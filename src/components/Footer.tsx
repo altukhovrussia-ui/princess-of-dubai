@@ -39,20 +39,25 @@ export const Footer: React.FC = () => {
     <footer className="bg-deep-grey text-ivory pt-32 pb-12 px-6 md:px-24 border-t border-ivory/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-24 mb-32">
-          <div className="md:col-span-2">
-            <h2 className="text-4xl font-serif mb-8 text-gold">{t('navbar.logo_princess')} <br /> {t('navbar.logo_of')} {t('navbar.logo_dubai')}</h2>
-            <p className="text-ivory/40 max-w-sm text-sm leading-relaxed font-sans mb-8">
+          <div className="md:col-span-2 overflow-hidden">
+            <h2 
+              className="font-serif mb-8 text-gold whitespace-nowrap"
+              style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}
+            >
+              {t('navbar.logo_princess')} {t('navbar.logo_of')} {t('navbar.logo_dubai')}
+            </h2>
+            <p className="text-ivory/40 max-w-md text-sm leading-relaxed font-sans mb-8">
               {t('footer.tagline')}
             </p>
-            <span className="font-script text-3xl opacity-50 text-ivory">{t('footer.script')}</span>
           </div>
           
           <div>
             <h4 className="text-2xl font-serif text-gold mb-8">{t('footer.contact_title')}</h4>
             <ul className="space-y-4 text-sm text-ivory/60 font-sans">
+              <li className="flex items-center gap-3"><Phone size={14} className="text-gold" /> +971 50 18 48 087</li>
+              <li className="flex items-center gap-3"><Phone size={14} className="text-gold" /> +971 50 68 99 505</li>
               <li className="flex items-center gap-3"><Phone size={14} className="text-gold" /> +971 52 70 80 474</li>
-              <li className="flex items-center gap-3"><MessageCircle size={14} className="text-gold" /> +971 50 18 48 087</li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-3 pt-2">
                 <Mail size={14} className="text-gold" />
                 <a href="mailto:info@princessofdubai.ae" className="hover:text-gold transition-colors">info@princessofdubai.ae</a>
               </li>
