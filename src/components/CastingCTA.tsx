@@ -49,6 +49,12 @@ export const CastingCTA: React.FC = () => {
               ))}
             </div>
           </div>
+
+          <div className="mt-12 text-center">
+            <a href="#" className="font-sans text-[10px] text-ivory/60 border-b border-gold/30 pb-1 hover:border-gold hover:text-gold transition-colors duration-500 uppercase tracking-widest inline-block">
+              {t('castingCta.presentation')}
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

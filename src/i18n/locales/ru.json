@@ -88,7 +88,8 @@
     "fee_tier2": "AED 50 000",
     "fee_tier3": "AED 80 000",
     "fee_tier4": "AED 100 000",
-    "cta": "Подать заявку"
+    "cta": "Подать заявку",
+    "presentation": "Презентация для участницы"
   },
   "crowns": {
     "title_line1": "Номинации и",
@@ -291,8 +292,8 @@
     "org_committee_title": "Исполнительный комитет",
     "org_member1_name": "Никита Саморуков",
     "org_member2_name": "Дмитрий Угаслов",
-    "org_member3_name": "Шахаб Ахмад Султан Абдулкарим",
-    "org_member4_name": "Халед Алшариф",
+    "org_member3_name": "Shahab Ahmad Sultan Abdulkarim",
+    "org_member4_name": "Khaled Alsharif",
     "org_member_role": "Член комитета",
 
     "project_script": "О проекте",

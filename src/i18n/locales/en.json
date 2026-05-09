@@ -88,7 +88,8 @@
     "fee_tier2": "AED 50,000",
     "fee_tier3": "AED 80,000",
     "fee_tier4": "AED 100,000",
-    "cta": "Submit Application"
+    "cta": "Submit Application",
+    "presentation": "Participant Presentation"
   },
   "crowns": {
     "title_line1": "Honours &",
