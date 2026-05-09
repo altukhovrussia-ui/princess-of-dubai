@@ -14,16 +14,16 @@ export const LanguageSwitcher: React.FC = () => {
       <button
         onClick={() => switchTo('en')}
         className={`px-2 py-1 transition-colors duration-300 ${
-          currentLang === 'en' ? 'text-gold' : 'text-ivory/50 hover:text-ivory'
+          currentLang === 'en' ? 'text-gold' : 'text-deep-grey/70 hover:text-deep-grey'
         }`}
       >
         EN
       </button>
-      <span className="text-ivory/20">|</span>
+      <span className="text-deep-grey/20">|</span>
       <button
         onClick={() => switchTo('ru')}
         className={`px-2 py-1 transition-colors duration-300 ${
-          currentLang === 'ru' ? 'text-gold' : 'text-ivory/50 hover:text-ivory'
+          currentLang === 'ru' ? 'text-gold' : 'text-deep-grey/70 hover:text-deep-grey'
         }`}
       >
         RU
